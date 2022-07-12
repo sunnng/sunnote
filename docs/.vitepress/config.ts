@@ -16,8 +16,9 @@ export default defineConfig({
     logo: { light: "/logo.svg", dark: "/logo-dark.svg" },
     siteTitle: "SunNote",
     nav: [
-      { text: "Java Web", link: "/web/java-web", activeMatch: "/web" },
+      { text: "Java Web", link: "/web/java-web" },
       { text: "Tools", link: "/tools/git" },
+      { text: "Web", link: "/web/session" },
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
@@ -30,6 +31,15 @@ export default defineConfig({
           items: [
             // This shows `/guide/index.md` page.
             { text: "Git", link: "/tools/git" }, // /guide/index.md
+          ],
+        },
+      ],
+      "/web/": [
+        {
+          text: "Web technology",
+          items: [
+            // This shows `/guide/index.md` page.
+            { text: "Session", link: "/web/session" }, // /guide/index.md
           ],
         },
       ],
