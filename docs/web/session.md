@@ -89,3 +89,34 @@ Session对象功能：
 Session是基于Cookie实现的。
 
 ![](./assets/1629430754825.png)
+
+## Session 使用细节
+
+### Session 钝化、活化
+
++ 钝化：在服务器正常关闭后，Tomcat会自动将Session数据写入硬盘文件中。
++ 活化：再次启动服务器后，从文件中加载数据到Session中。
+
+### Session 销毁
+
++ 默认情况下，无操作，30分钟自动销毁。
+
+```xml
+<session-config>
+    <session-timeout>30</session-timeout>
+</session-config>
+```
+
++ 调用Session对象的invalidate()方法。
+
+## 总结
+
+Cookie和Session都是来完成一次会话内多次请求间**数据共享**的。
+
+区别：
+
++ 存储位置：Cookie 是将数据存储在客户端，Session 将数据存储在服务端。
++ 安全性：Cookie 不安全，Session 安全。
++ 数据大小：Cookie 最大3KB，Session 无大小限制。
++ 存储时间：Cookie 可以长期存储，Session 默认30分钟。
++ 服务器性能：Cookie 不占服务器资源，Session 占用服务器资源。

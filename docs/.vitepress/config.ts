@@ -39,7 +39,7 @@ export default defineConfig({
           text: "Web technology",
           items: [
             // This shows `/guide/index.md` page.
-            { text: "Session", link: "/web/session" }, // /guide/index.md
+            { text: "会话跟踪技术", link: "/web/session" }, // /guide/index.md
           ],
         },
       ],
