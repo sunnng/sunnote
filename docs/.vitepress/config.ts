@@ -19,6 +19,7 @@ export default defineConfig({
       { text: "Java Web", link: "/web/java-web" },
       { text: "Tools", link: "/tools/git" },
       { text: "Web", link: "/web/session" },
+      { text: "后端开发", link: "/backend/javaSE" },
     ],
     socialLinks: [
       { icon: "github", link: "https://github.com/vuejs/vitepress" },
@@ -29,8 +30,7 @@ export default defineConfig({
         {
           text: "Develop Tools",
           items: [
-            // This shows `/guide/index.md` page.
-            { text: "Git", link: "/tools/git" }, // /guide/index.md
+            { text: "Git", link: "/tools/git" },
           ],
         },
       ],
@@ -38,8 +38,16 @@ export default defineConfig({
         {
           text: "Web technology",
           items: [
-            // This shows `/guide/index.md` page.
-            { text: "会话跟踪技术", link: "/web/session" }, // /guide/index.md
+            { text: "会话跟踪技术", link: "/web/session" },
+          ],
+        },
+      ],
+      "/backend/": [
+        {
+          text: "Java",
+          items: [
+            { text: "Java环境安装", link: "/backend/javaSE" },
+            { text: "JavaSE基础语法", link: "/backend/javaSE-base" },
           ],
         },
       ],
